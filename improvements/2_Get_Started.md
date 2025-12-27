@@ -1,0 +1,36 @@
+# Installing Percona PostgreSQL Operator
+
+This document provides an overview of the pre-requisites and the different methods available to install the Percona PostgreSQL Operator.
+Method suitable for installation differs based on use case and preferences.
+
+# Pre-Requisites
+
+[Setup Kubernetes Cluster](./2.1.1_setup_k8s_cluster.md)
+
+# Install Process
+
+Installation consists of two parts:
+1. Installing the Percona Operator for PostgreSQL
+2. Creating a Percona PostgreSQL cluster
+
+The PostgreSQL cluster depends on the Operator. Ensure that the Operator is installed before creating the PostgreSQL cluster, and that the namespace where the PostgreSQL cluster is created is watched and reconciled by the Operator. Refer the [doc](./2.1.6_operator_namespace.md) for more information on how operator can be configured to watch namespaces.
+
+# Installation Methods
+
+## [1. Installation with kubectl](./2.1.2_kubectl_installation.md)
+
+This method involves applying YAML manifests to your Kubernetes cluster using Kubernetes command-line tool `kubectl`.
+
+
+### [2. Installation with Helm](./2.1.3_helm_installation.md)
+
+This method involves installation using Helm, the package manager for Kubernetes.
+
+
+### [3. Installation with Operator Hub](./2.1.4_operator_hub_installation.md)
+
+
+### [4. Quick Install](./2.1.5_quick_install.md)
+
+This document involves installing the Operator and creating PostgreSQL cluster with default configurations.
+Use this approach for creating a quick and functional setup before exploring advanced features.
